@@ -1,6 +1,6 @@
 # coding=utf-8
 import random
-
+import TickerConfig
 import time
 
 urls = {
@@ -587,6 +587,16 @@ urls = {
         "is_json": True,
     },
 
-
-
+    "autoVerifyImage": {  # 云打码接口
+        "req_url": TickerConfig.REQ_URL,
+        "req_type": "post",
+        "Referer": "",
+        "Host": TickerConfig.HOST,
+        "re_try": 6,
+        "re_time": 10,
+        "s_time": 0.001,
+        "is_logger": True,
+        "is_json": True,
+        "httpType": TickerConfig.HTTP_TYPE
+    },
 }
